@@ -21,19 +21,23 @@
   
   OPTIONS:
     -p <port>, --port <port>
-        Listen on this port (9090). Use :port in project.clj.
+        Listen on this port (9090).
 
     -s <path>, --static <path>
-        Serve static files from this path. Default is the default resource
-        path used by compojure. Use :static in project.clj.
+        Serve static files from this path. Default is the default
+        resource path used by compojure.
 
     -P <prefix>, --prefix <prefix>
-        Proxy all requests whose path begins with <prefix>. There is no
-        default; this parameter is required. Use :prefix in project.clj.
+        Proxy all requests whose path begins with <prefix> ('').
 
     -r <uri>, --remote <uri>
         The remote uri which will service proxied requests. There is no
-        default; this parameter is required. Use :remote in project.clj.
+        default; this parameter is required.
+
+  PROJECT.CLJ:
+    You may specify an options map in the project.clj file under the
+    :proxy key. The map may contain any of the following keys: :port,
+    :static, :prefix, and/or :remote.
 
   EXAMPLE:
     If the <prefix> is '/foo' and the <remote> is 'http://bar.com/baz',
