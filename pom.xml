@@ -16,7 +16,7 @@
   <scm>
     <connection>scm:git:git://github.com/tailrecursion/lein-proxy.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/tailrecursion/lein-proxy.git</developerConnection>
-    <tag>e1ed80d64d135f77a4d04dc2a9ed88132a83db18</tag>
+    <tag>cc3d13d1995cbcc9ed478c6a1bb667eb2baeb818</tag>
     <url>https://github.com/tailrecursion/lein-proxy</url>
   </scm>
   <build>

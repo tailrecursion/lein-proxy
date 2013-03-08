@@ -24,8 +24,8 @@
         Listen on this port (9090).
 
     -s <path>, --static <path>
-        Serve static files from this path. Default is the default
-        resource path used by compojure.
+        Serve static files from this path. (Default is the default
+        resource path used by compojure.)
 
     -P <prefix>, --prefix <prefix>
         Proxy all requests whose path begins with <prefix> ('').
