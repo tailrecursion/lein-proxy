@@ -13,6 +13,12 @@
       <url>http://www.eclipse.org/legal/epl-v10.html</url>
     </license>
   </licenses>
+  <scm>
+    <connection>scm:git:git://github.com/tailrecursion/lein-proxy.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/tailrecursion/lein-proxy.git</developerConnection>
+    <tag>cafa97b3f9ba2bb284592112577672ca37441f7a</tag>
+    <url>https://github.com/tailrecursion/lein-proxy</url>
+  </scm>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <testSourceDirectory>test</testSourceDirectory>

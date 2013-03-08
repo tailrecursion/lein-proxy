@@ -21,13 +21,19 @@
   
   OPTIONS:
     -p <port>, --port <port>
-        Listen on this port.
+        Listen on this port (9090). Use :port in project.clj.
+
     -s <path>, --static <path>
-        Serve static files from this path.
+        Serve static files from this path. Default is the default resource
+        path used by compojure. Use :static in project.clj.
+
     -P <prefix>, --prefix <prefix>
-        Proxy all requests whose path begins with <prefix>.
+        Proxy all requests whose path begins with <prefix>. There is no
+        default; this parameter is required. Use :prefix in project.clj.
+
     -r <uri>, --remote <uri>
-        The remote uri which will service proxied requests.
+        The remote uri which will service proxied requests. There is no
+        default; this parameter is required. Use :remote in project.clj.
 
   EXAMPLE:
     If the <prefix> is '/foo' and the <remote> is 'http://bar.com/baz',
@@ -40,10 +46,12 @@
                ["-s" "--static" "Location of static files."
                 :default (:static p)]
                ["-P" "--prefix" "Paths that start with this will be proxied."
-                :default (:prefix p)]
+                :default (or (:prefix p) "")]
                ["-r" "--remote" "Remote URI which will service proxy requests."
                 :default (:remote p)]]
         [cfg]  (apply cli args opts)]
+    (if (not (and (:prefix cfg) (:remote cfg)))
+      (throw (Exception. "Please specify both prefix and remote.")))
     (prn cfg)
     (run-jetty (-> (if (:static cfg)
                      (files "/" {:root (:static cfg)})
