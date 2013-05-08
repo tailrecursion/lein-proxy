@@ -16,7 +16,7 @@
   <scm>
     <connection>scm:git:git://github.com/tailrecursion/lein-proxy.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/tailrecursion/lein-proxy.git</developerConnection>
-    <tag>cc3d13d1995cbcc9ed478c6a1bb667eb2baeb818</tag>
+    <tag>f15f6185dd51b11a5b4e1015cb91d7bfeb866e0c</tag>
     <url>https://github.com/tailrecursion/lein-proxy</url>
   </scm>
   <build>
@@ -41,9 +41,9 @@
   <repositories>
     <repository>
       <id>central</id>
-      <url>http://repo1.maven.org/maven2</url>
+      <url>http://repo1.maven.org/maven2/</url>
       <snapshots>
-        <enabled>true</enabled>
+        <enabled>false</enabled>
       </snapshots>
       <releases>
         <enabled>true</enabled>
@@ -84,7 +84,7 @@
     <dependency>
       <groupId>tailrecursion</groupId>
       <artifactId>ring-proxy</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>2.0.0-SNAPSHOT</version>
     </dependency>
   </dependencies>
 </project>

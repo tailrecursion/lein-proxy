@@ -8,4 +8,4 @@
                  [ring/ring-jetty-adapter "1.1.6"]
                  [compojure "1.1.3"]
                  [org.clojure/tools.cli "0.2.2"]
-                 [tailrecursion/ring-proxy "1.0.0-SNAPSHOT"]])
+                 [tailrecursion/ring-proxy "2.0.0-SNAPSHOT"]])
